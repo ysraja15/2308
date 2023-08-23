@@ -1,0 +1,6 @@
+---
+# tasks file for /etc/ansible/roles/apache
+### tasks file for /etc/ansible/roles/apache
+- import_tasks: install.yaml
+- import_tasks: configure.yaml
+- import_tasks: service.yaml

@@ -1,0 +1,7 @@
+---
+- hosts: linux
+  tasks:
+  - name: loop with rnage function
+    debug:
+      msg: "{{ 'number: %s' | format(item) }}"
+    loop: "{{ range(0, 2, 1)|list }}"

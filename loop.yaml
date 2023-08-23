@@ -1,0 +1,13 @@
+---
+- hosts: linux
+  tasks:
+  - name: Create directory in loop
+    file:
+      path: "{{ item }}"
+      state: directory
+    with_items:
+    - /home/ansible/folder1
+    - /home/ansible/folder2
+    - /home/ansible/folder3
+
+

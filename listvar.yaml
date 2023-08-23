@@ -1,0 +1,9 @@
+- hosts: linux
+  vars:
+    teams: [csk, rcp, mi, srh]
+  tasks:
+  - name: create file
+    debug:
+      msg: "{{ item }}"
+    with_items:
+      - "{{ teams }}"
